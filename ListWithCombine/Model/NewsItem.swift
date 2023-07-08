@@ -38,18 +38,18 @@ struct NewsItem: Codable {
         self.title = title
         self.url = url
     }
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        author = try container.decode(String.self, forKey: .author)
-        content = try container.decode(String.self, forKey: .content)
-        date = try container.decode(String.self, forKey: .date)
-        id = try container.decode(String.self, forKey: .id)
-        imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
-        readMoreUrl = try container.decodeIfPresent(String.self, forKey: .readMoreUrl)
-        time = try container.decode(String.self, forKey: .time)
-        title = try container.decode(String.self, forKey: .title)
-        url = try container.decode(String.self, forKey: .url)
-    }
+//    init(from decoder: Decoder) throws {
+//        let container = try decoder.container(keyedBy: CodingKeys.self)
+//        author = try container.decode(String.self, forKey: .author)
+//        content = try container.decode(String.self, forKey: .content)
+//        date = try container.decode(String.self, forKey: .date)
+//        id = try container.decode(String.self, forKey: .id)
+//        imageUrl = try container.decodeIfPresent(String.self, forKey: .imageUrl)
+//        readMoreUrl = try container.decodeIfPresent(String.self, forKey: .readMoreUrl)
+//        time = try container.decode(String.self, forKey: .time)
+//        title = try container.decode(String.self, forKey: .title)
+//        url = try container.decode(String.self, forKey: .url)
+//    }
     
     func copy() -> NewsItem {
         return NewsItem(author: self.author, content: self.content, date: self.date, id: self.id, imageUrl: self.imageUrl,
