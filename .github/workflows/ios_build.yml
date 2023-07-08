@@ -45,7 +45,7 @@ jobs:
 
       - name: build archive
         run: |
-          xcodebuild -scheme "I am Groot" \
+          xcodebuild -scheme "ListWithCombine" \
           -archivePath $RUNNER_TEMP/ListWithCombine.xcarchive \
           -sdk iphoneos \
           -configuration Debug \
